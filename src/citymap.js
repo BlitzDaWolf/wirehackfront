@@ -56,11 +56,12 @@ class CityLocator extends Component {
         </Marker>
           {
             points.map(x=>{
-              return (<Marker icon={myIcon} position={[x.latitude + position[0], x.longitude + position[1]]}></Marker>)
+              return (<Marker icon={myIcon} position={[x.latitude, x.longitude]}></Marker>)
             })
           }
       </Map>
     );
   }
 }
+
 export default CityLocator;
