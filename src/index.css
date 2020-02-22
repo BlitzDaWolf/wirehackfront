@@ -1,10 +1,9 @@
 body{
-  background-image: url('streetpicture.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .map{
-  height: 1000px;
+  height: 1060px;
 }
 
 tr {
