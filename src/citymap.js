@@ -3,6 +3,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "./App.css";
 import zombie from "./zombiePoint.svg";
+import Warning from './warning';
 
 var myIcon = L.icon({
   iconUrl: zombie,
@@ -42,7 +43,7 @@ class CityLocator extends Component {
     lat: 50.799961,
     lng: 3.279420,
     zoom: 15,
-    points: [{latitude: 0, longitude: 0}]
+    points: []
   };
   
   render() {
@@ -50,7 +51,8 @@ class CityLocator extends Component {
 
     let {points} = this.state;
 
-    return (
+    return (<div>
+      <Warning />
       <Map className="map" center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -67,6 +69,7 @@ class CityLocator extends Component {
             })
           }
       </Map>
+      </div>
     );
   }
 }
