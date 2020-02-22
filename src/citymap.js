@@ -19,7 +19,7 @@ var you = L.icon({
   popupAnchor: [-10, -90]
 });
 
-const URL = 'http://10.193.239.34:3002/api/v1/pointers';
+const URL = 'http://localhost:3002/api/v1/pointers';
 
 class CityLocator extends Component {
   componentDidMount() {
